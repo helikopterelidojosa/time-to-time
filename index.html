@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>timer counter</title>
 </head>
-<body onclick="checkTime()">
-    <h1 id="info" style="font-size: 100px;">click to start</h1>
+<body onload="init()">
+    <h1 id="mytime">time since is: 0 s</h1>
     <script>
 
         var time = 0;
-        
-function checkTime(){
+
+function init(){
+    time++;
+    
+    document.getElementById("mytime").innerHTML = "time since is: " + time + " s"
+
+
+
+
     
 }
+setInterval(init, 1000);
+
     </script>
 </body>
 </html>
